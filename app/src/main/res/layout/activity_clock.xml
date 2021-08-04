@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".clock">
+
+    <AnalogClock
+        android:id="@+id/analogClock"
+        android:layout_width="540px"
+        android:layout_height="540px"
+        android:layout_marginTop="100dp"
+        android:dial="@drawable/clock_background"
+
+        android:hand_hour="@drawable/clock_needle"
+        android:hand_minute="@drawable/clock_needle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/menu_btn"
+        android:layout_width="90px"
+        android:layout_height="0dp"
+        android:layout_marginTop="17dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/menu_btn" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="오늘 남은 시간"
+        android:textColor="@color/black"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="53dp" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="0dp"
+        android:layout_height="5dp"
+        android:layout_marginTop="1149px"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/bottom" />
+
+    <Button
+        android:id="@+id/btn_analysis"
+        android:layout_width="0dp"
+        android:layout_height="78px"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginBottom="1dp"
+        android:background="@drawable/selector_analysis"
+        app:backgroundTint="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView6"
+        app:layout_constraintDimensionRatio="w,2.3:1"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btn_chart"
+        android:layout_width="0dp"
+        android:layout_height="78px"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="1dp"
+        android:background="@drawable/selector_chart"
+        app:backgroundTint="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView6"
+        app:layout_constraintDimensionRatio="w,2.3:1"
+        app:layout_constraintEnd_toStartOf="@+id/button2"
+        app:layout_constraintStart_toEndOf="@+id/btn_analysis" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="0dp"
+        android:layout_height="78px"
+        android:layout_marginEnd="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="1dp"
+        android:background="@drawable/selector_statics"
+        app:backgroundTint="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView6"
+        app:layout_constraintDimensionRatio="w,2.3:1"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
